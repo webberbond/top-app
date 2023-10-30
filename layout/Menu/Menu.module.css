@@ -36,7 +36,12 @@
   margin-left: 12px;
 }
 
+.secondLevelBlock {
+  display: none;
+}
+
 .secondLevelBlockOpened:last-child {
+  display: block;
   margin-bottom: 20px;
 }
 
