@@ -4,8 +4,15 @@ import cn from 'classnames';
 import { useEffect, useState } from 'react';
 import StarIcon from './star.svg';
 
-export const Rating = ({ isEditable=false, rating, setRating, ...props }: RatingProps) => {
-  const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
+export const Rating = ({
+  isEditable = false,
+  rating,
+  setRating,
+  ...props
+}: RatingProps) => {
+  const [ratingArray, setRatingArray] = useState<JSX.Element[]>(
+    new Array(5).fill(<></>),
+  );
 
   useEffect(() => {
     constructRating(rating);
@@ -22,7 +29,7 @@ export const Rating = ({ isEditable=false, rating, setRating, ...props }: Rating
           onMouseEnter={() => changeDisplay(i + 1)}
           onMouseLeave={() => changeDisplay(rating)}
           onClick={() => changeRating(i + 1)}
-          >
+        >
           <StarIcon
             tabIndex={isEditable ? 0 : -1}
             onKeyDown={(e: KeyboardEvent) =>
@@ -36,7 +43,7 @@ export const Rating = ({ isEditable=false, rating, setRating, ...props }: Rating
   };
 
   const changeDisplay = (i: number) => {
-    if(!isEditable){
+    if (!isEditable) {
       return;
     }
     constructRating(i);
@@ -58,7 +65,9 @@ export const Rating = ({ isEditable=false, rating, setRating, ...props }: Rating
 
   return (
     <div {...props}>
-      {ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
+      {ratingArray.map((r, i) => (
+        <span key={i}>{r}</span>
+      ))}
     </div>
   );
 };

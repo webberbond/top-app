@@ -4,10 +4,7 @@ import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 
 function Search() {
-  return (
-    <>
-    </>
-  );
+  return <></>;
 }
 
 export default withLayout(Search);
