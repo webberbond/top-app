@@ -1,14 +1,15 @@
-import { Advantages, Htag, Tag } from '@/components';
+import { Advantages, Htag, Sort, Tag } from '../../components';
 import { TopPageComponentProps } from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
+import { SortEnum } from '../../components/Sort/Sort.props';
 import { HhData } from '@/components/HhData/HhData';
 
 export const TopPageComponent = ({
   page,
   products,
   firstCategory,
-}: TopPageComponentProps) => {
+}: TopPageComponentProps): JSX.Element => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -18,7 +19,7 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <span>Сортировка</span>
+        <Sort sort={SortEnum.Rating} setSort={() => {}} />
       </div>
       <div>
         {products && products.map((p) => <div key={p._id}>{p.title}</div>)}
@@ -34,11 +35,16 @@ export const TopPageComponent = ({
       )}
       {page.advantages && page.advantages.length > 0 && (
         <>
-          <Htag tag="h2">Преимущества</Htag>
+          <Htag tag="h2">Преимущства</Htag>
           <Advantages advantages={page.advantages} />
         </>
       )}
-      {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html: page.seoText }}/>}
+      {page.seoText && (
+        <div
+          className={styles.seo}
+          dangerouslySetInnerHTML={{ __html: page.seoText }}
+        />
+      )}
       <Htag tag="h2">Получаемые навыки</Htag>
       {page.tags.map((t) => (
         <Tag key={t} color="primary">
