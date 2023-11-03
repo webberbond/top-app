@@ -1,29 +1,17 @@
 import { useEffect, useState } from 'react';
-import { Button, Htag, P, Rating, Tag } from '../components';
+import { Button, Htag, Input, P, Rating, Tag } from '../components';
 import { withLayout } from '@/layout/Layout';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 
 function Home({ menu }: HomeProps) {
-  const [counter, setCounter] = useState<number>(0);
   const [rating, setRating] = useState<number>(4);
-
-  useEffect(() => {
-    console.log('Counter' + counter);
-    return function cleanup() {
-      console.log('unmount');
-    };
-  });
 
   return (
     <>
-      <Htag tag="h1">{counter}</Htag>
-      <Button
-        appereance="primary"
-        arrow="right"
-        onClick={() => setCounter((x) => x + 1)}
-      >
+      <Htag tag="h1">Заголовок</Htag>
+      <Button appereance="primary" arrow="right">
         Кнопка
       </Button>
       <Button appereance="ghost" arrow="down">
@@ -41,6 +29,7 @@ function Home({ menu }: HomeProps) {
       </Tag>
       <Tag color="primary">Primary</Tag>
       <Rating rating={rating} isEditable setRating={setRating} />
+      <Input placeholder='тест'/>
     </>
   );
 }
