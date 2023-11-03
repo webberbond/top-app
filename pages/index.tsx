@@ -11,10 +11,10 @@ function Home({ menu }: HomeProps) {
   return (
     <>
       <Htag tag="h1">Заголовок</Htag>
-      <Button appereance="primary" arrow="right">
+      <Button appearance="primary" arrow="right">
         Кнопка
       </Button>
-      <Button appereance="ghost" arrow="down">
+      <Button appearance="ghost" arrow="down">
         Кнопка
       </Button>
       <P size="l">Большой</P>
