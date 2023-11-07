@@ -26,12 +26,27 @@
   grid-template-columns: auto 1fr;
 }
 
+.panel {
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 .success {
   position: relative;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
   background: var(--green-light);
+}
+
+.error {
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background: var(--red-light);
 }
 
 .successTitle {
@@ -43,6 +58,10 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+
+.error .close path {
+  stroke: var(--red);
 }
 
 @media screen and (width <= 1100px) {
