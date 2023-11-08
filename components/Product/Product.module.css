@@ -37,9 +37,7 @@
 }
 
 .advBlock {
-  font-size: 16px;
   grid-column: middle / end;
-  line-height: 22px;
 }
 
 .logo img {
@@ -94,6 +92,19 @@
   margin-left: 20px;
 }
 
+.advBlock {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.opened {
+  height: auto;
+}
+ 
+.closed {
+  height: 0;
+}
+
 .advTitle {
   margin-bottom: 5px;
   font-weight: bold;
@@ -129,16 +140,9 @@
   margin-bottom: 5px;
 }
 
-.opened {
+.reviews {
   overflow: hidden;
-  max-height: auto;
   padding: 30px;
-}
-
-.closed {
-  overflow: hidden;
-  max-height: 0;
-  padding: 0;
 }
 
 .rateTitle a {
@@ -226,7 +230,6 @@
   }
 }
 
-
 @media screen and (width <= 640px) {
   .product {
     grid-template-areas: 
@@ -257,7 +260,6 @@
     margin-bottom: 10px;
   }
 }
-
 
 @media screen and (width <= 480px) {
   .product {
