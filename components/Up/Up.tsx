@@ -4,6 +4,7 @@ import UpIcon from './up.svg';
 import { useAnimation } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
 
 export const Up = () => {
   const controls = useAnimation();
@@ -21,13 +22,12 @@ export const Up = () => {
   };
 
   return (
-    <motion.button
+    <motion.div
       className={styles.up}
-      onClick={scrollToTop}
       animate={controls}
       initial={{ opacity: 0 }}
     >
-      <UpIcon />
-    </motion.button>
+      <ButtonIcon appearance="primary" icon="up" onClick={scrollToTop} />
+    </motion.div>
   );
 };
