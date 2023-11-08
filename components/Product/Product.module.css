@@ -37,7 +37,9 @@
 }
 
 .advBlock {
+  font-size: 16px;
   grid-column: middle / end;
+  line-height: 22px;
 }
 
 .logo img {
@@ -90,11 +92,6 @@
 
 .reviewButton {
   margin-left: 20px;
-}
-
-.advBlock {
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .advTitle {
