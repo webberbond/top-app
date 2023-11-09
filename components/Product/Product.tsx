@@ -17,22 +17,22 @@ export const Product = motion(
     (
       { product, className, ...props }: ProductProps,
       ref: ForwardedRef<HTMLDivElement>,
-    ): JSX.Element => {
+    ) => {
       const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
       const reviewRef = useRef<HTMLDivElement>(null);
-
       const variants = {
         visible: { opacity: 1, height: 'auto' },
         hidden: { opacity: 0, height: 0 },
       };
-
       const scrollToReview = () => {
         setIsReviewOpened(true);
         reviewRef.current?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
         });
+        reviewRef.current?.focus();
       };
+
       return (
         <div className={className} {...props} ref={ref}>
           <Card className={styles.product}>
@@ -119,11 +119,8 @@ export const Product = motion(
             initial="hidden"
           >
             <Card
-              color={'blue'}
-              className={cn(styles.reviews, {
-                [styles.opened]: isReviewOpened,
-                [styles.closed]: !isReviewOpened,
-              })}
+              color="blue"
+              className={styles.reviews}
               ref={reviewRef}
               tabIndex={isReviewOpened ? 0 : -1}
             >
@@ -133,7 +130,7 @@ export const Product = motion(
                   <Divider />
                 </div>
               ))}
-              <ReviewForm productId={product._id} />
+              <ReviewForm productId={product._id} isOpened={isReviewOpened} />
             </Card>
           </motion.div>
         </div>
