@@ -3,7 +3,7 @@ import React from 'react';
 import { MenuItem } from '../../interfaces/menu.interface';
 import styles from './Category.module.css';
 
-const Category = ({ category }: { category: MenuItem }) => {
+export const Category = ({ category }: { category: MenuItem }) => {
   return (
     <li className={styles.category}>
       <h2 className={styles.title}>{category._id.secondCategory}</h2>
@@ -20,5 +20,3 @@ const Category = ({ category }: { category: MenuItem }) => {
     </li>
   );
 };
-
-export default Category;

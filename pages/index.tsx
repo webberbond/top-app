@@ -5,7 +5,7 @@ import { withLayout } from '../layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
 import { API } from '../helpers/api';
 import styles from '../styles/home.module.css';
-import Category from '@/components/Category/Category';
+import { Category } from '../components';
 
 function Home({ menu }: HomeProps) {
   return (
