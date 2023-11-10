@@ -22,7 +22,7 @@ export const Rating = forwardRef(
       ...props
     }: RatingProps,
     ref: ForwardedRef<HTMLDivElement>,
-  ): JSX.Element => {
+  ) => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(
       new Array(5).fill(<></>),
     );

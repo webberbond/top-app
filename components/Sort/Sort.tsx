@@ -2,12 +2,7 @@ import { SortEnum, SortProps } from './Sort.props';
 import styles from './Sort.module.css';
 import SortIcon from './sort.svg';
 import cn from 'classnames';
-export const Sort = ({
-  sort,
-  setSort,
-  className,
-  ...props
-}: SortProps): JSX.Element => {
+export const Sort = ({ sort, setSort, className, ...props }: SortProps) => {
   return (
     <div className={cn(styles.sort, className)} {...props}>
       <div className={styles.sortName} id="sort">

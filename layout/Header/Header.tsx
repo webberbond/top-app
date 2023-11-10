@@ -8,7 +8,7 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
+export const Header = ({ className, ...props }: HeaderProps) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const router = useRouter();
   const shouldReduceMotion = useReducedMotion();
