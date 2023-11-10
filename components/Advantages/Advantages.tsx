@@ -1,5 +1,5 @@
-import { AdvantagesProps } from './Advantages.props';
 import styles from './Advantages.module.css';
+import { AdvantagesProps } from './Advantages.props';
 import CheckIcon from './check.svg';
 
 export const Advantages = ({ advantages }: AdvantagesProps) => {

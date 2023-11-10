@@ -1,7 +1,7 @@
-import { CardProps } from './Card.props';
-import styles from './Card.module.css';
 import cn from 'classnames';
 import { ForwardedRef, forwardRef } from 'react';
+import styles from './Card.module.css';
+import { CardProps } from './Card.props';
 
 export const Card = forwardRef(
   (

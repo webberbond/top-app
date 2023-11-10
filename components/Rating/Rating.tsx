@@ -1,15 +1,15 @@
-import { RatingProps } from './Rating.props';
-import styles from './Rating.module.css';
 import cn from 'classnames';
-import StarIcon from './star.svg';
 import {
-  useEffect,
-  useState,
+  ForwardedRef,
   KeyboardEvent,
   forwardRef,
-  ForwardedRef,
+  useEffect,
   useRef,
+  useState,
 } from 'react';
+import styles from './Rating.module.css';
+import { RatingProps } from './Rating.props';
+import StarIcon from './star.svg';
 
 export const Rating = forwardRef(
   (

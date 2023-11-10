@@ -1,16 +1,13 @@
-import { ReviewFormProps } from './ReviewForm.props';
-import styles from './ReviewForm.module.css';
-import CloseIcon from './close.svg';
-import cn from 'classnames';
-import { Input } from '../Input/Input';
-import { Rating } from '../Rating/Rating';
-import { Textarea } from '../Textarea/Textarea';
-import { Button } from '../Button/Button';
-import { useForm, Controller } from 'react-hook-form';
-import { IReviewForm, IReviewSentResponse } from './ReviewForm.interface';
 import axios from 'axios';
-import { API } from '../../helpers/api';
+import cn from 'classnames';
 import { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
+import { Button, Input, Rating, Textarea } from '..';
+import { API } from '../../helpers/api';
+import { IReviewForm, IReviewSentResponse } from './ReviewForm.interface';
+import styles from './ReviewForm.module.css';
+import { ReviewFormProps } from './ReviewForm.props';
+import CloseIcon from './close.svg';
 
 export const ReviewForm = ({
   productId,

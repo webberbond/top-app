@@ -1,11 +1,10 @@
-import { SearchProps } from './Search.props';
-import styles from './Search.module.css';
-import GlassIcon from './glass.svg';
 import cn from 'classnames';
-import { Input } from '../Input/Input';
-import { Button } from '../Button/Button';
-import { useState, KeyboardEvent } from 'react';
 import { useRouter } from 'next/router';
+import { KeyboardEvent, useState } from 'react';
+import { Button, Input } from '..';
+import styles from './Search.module.css';
+import { SearchProps } from './Search.props';
+import GlassIcon from './glass.svg';
 
 export const Search = ({ className, ...props }: SearchProps) => {
   const [search, setSearch] = useState<string>('');

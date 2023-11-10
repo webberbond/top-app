@@ -1,9 +1,9 @@
-import CoursesIcon from './icons/courses.svg';
-import ServicesIcon from './icons/services.svg';
+import { FirstLevelMenuItem } from '../interfaces/menu.interface';
+import { TopLevelCategory } from '../interfaces/page.interface';
 import BooksIcon from './icons/books.svg';
+import CoursesIcon from './icons/courses.svg';
 import ProductsIcon from './icons/products.svg';
-import { TopLevelCategory } from '@/interfaces/page.interface';
-import { FirstLevelMenuItem } from '@/interfaces/menu.interface';
+import ServicesIcon from './icons/services.svg';
 
 export const firstLevelMenu: FirstLevelMenuItem[] = [
   {

@@ -1,8 +1,8 @@
 import { Card } from '..';
-import { HhDataProps } from './HhData.props';
+import { priceRu } from '../../helpers/helpers';
 import styles from './HhData.module.css';
+import { HhDataProps } from './HhData.props';
 import RateIcon from './rate.svg';
-import { priceRu } from '@/helpers/helpers';
 
 export const HhData = ({
   count,

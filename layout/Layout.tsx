@@ -1,17 +1,17 @@
-import { LayoutProps } from './Layout.props';
-import styles from './Layout.module.css';
-import { Header } from './Header/Header';
-import { Sidebar } from './Sidebar/Sidebar';
-import { Footer } from './Footer/Footer';
-import React, {
+import {
   FunctionComponent,
-  useState,
   KeyboardEvent,
   useRef,
+  useState,
 } from 'react';
-import { AppContextProvider, IAppContext } from '@/context/app.context';
-import { Up } from '@/components';
+import { Footer } from './Footer/Footer';
+import { Header } from './Header/Header';
+import styles from './Layout.module.css';
+import { LayoutProps } from './Layout.props';
+import { Sidebar } from './Sidebar/Sidebar';
 import cn from 'classnames';
+import { Up } from '../components';
+import { AppContextProvider, IAppContext } from '../context/app.context';
 
 const Layout = ({ children }: LayoutProps) => {
   const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] =

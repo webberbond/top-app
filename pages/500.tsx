@@ -1,4 +1,3 @@
-import React from 'react';
 import { Htag } from '../components';
 import { withLayout } from '../layout/Layout';
 

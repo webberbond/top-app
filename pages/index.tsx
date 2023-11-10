@@ -1,11 +1,10 @@
-import { GetStaticProps } from 'next';
 import axios from 'axios';
-import { Htag } from '../components';
-import { withLayout } from '../layout/Layout';
-import { MenuItem } from '../interfaces/menu.interface';
+import { GetStaticProps } from 'next';
+import { Category, Htag } from '../components';
 import { API } from '../helpers/api';
+import { MenuItem } from '../interfaces/menu.interface';
+import { withLayout } from '../layout/Layout';
 import styles from '../styles/home.module.css';
-import { Category } from '../components';
 
 function Home({ menu }: HomeProps) {
   return (

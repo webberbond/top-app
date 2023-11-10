@@ -1,12 +1,12 @@
-import { HeaderProps } from './Header.props';
-import styles from './Header.module.css';
-import Logo from '../logo.svg';
 import cn from 'classnames';
-import { ButtonIcon } from '../../components/ButtonIcon/ButtonIcon';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Sidebar } from '../Sidebar/Sidebar';
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { ButtonIcon } from '../../components/ButtonIcon/ButtonIcon';
+import { Sidebar } from '../Sidebar/Sidebar';
+import Logo from '../logo.svg';
+import styles from './Header.module.css';
+import { HeaderProps } from './Header.props';
 
 export const Header = ({ className, ...props }: HeaderProps) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);

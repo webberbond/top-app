@@ -1,12 +1,12 @@
-import { Advantages, Htag, Product, Sort, Tag } from '../../components';
-import { TopPageComponentProps } from './TopPageComponent.props';
-import styles from './TopPageComponent.module.css';
-import { HhData } from '../../components';
-import { TopLevelCategory } from '../../interfaces/page.interface';
-import { SortEnum } from '../../components/Sort/Sort.props';
-import { useEffect, useReducer } from 'react';
-import { sortReducer } from './sort.reducer';
 import { useReducedMotion } from 'framer-motion';
+import { useEffect, useReducer } from 'react';
+import { Advantages, HhData, Htag, Product, Sort, Tag } from '../../components';
+import { SortEnum } from '../../components/Sort/Sort.props';
+import { TopLevelCategory } from '../../interfaces/page.interface';
+import styles from './TopPageComponent.module.css';
+import { TopPageComponentProps } from './TopPageComponent.props';
+import { sortReducer } from './sort.reducer';
+
 export const TopPageComponent = ({
   page,
   products,

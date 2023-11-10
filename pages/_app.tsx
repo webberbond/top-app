@@ -1,9 +1,8 @@
 import { AppProps } from 'next/app';
-import '../styles/globals.css';
 import Head from 'next/head';
 import Router from 'next/router';
-import ym from 'react-yandex-metrika';
-import { YMInitializer } from 'react-yandex-metrika';
+import ym, { YMInitializer } from 'react-yandex-metrika';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   Router.events.on('routeChangeComplete', (url: string) => {

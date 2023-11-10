@@ -1,9 +1,8 @@
-import { useScrollY } from '@/hooks/useScrollY';
-import styles from './Up.module.css';
-import { useAnimation } from 'framer-motion';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
+import { useScrollY } from '../../hooks/useScrollY';
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
+import styles from './Up.module.css';
 
 export const Up = () => {
   const controls = useAnimation();

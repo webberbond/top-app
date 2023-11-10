@@ -1,16 +1,11 @@
-import { ProductProps } from './Product.props';
-import styles from './Product.module.css';
 import cn from 'classnames';
-import { Card } from '../Card/Card';
-import { Rating } from '../Rating/Rating';
-import { Tag } from '../Tag/Tag';
-import { Button } from '../Button/Button';
-import { declOfNum, priceRu } from '../../helpers/helpers';
-import { Divider } from '../Divider/Divider';
-import { ForwardedRef, forwardRef, useRef, useState } from 'react';
-import { Review } from '../Review/Review';
-import { ReviewForm } from '../ReviewForm/ReviewForm';
 import { motion } from 'framer-motion';
+import { ForwardedRef, forwardRef, useRef, useState } from 'react';
+import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from '..';
+import { declOfNum, priceRu } from '../../helpers/helpers';
+import styles from './Product.module.css';
+import { ProductProps } from './Product.props';
+
 export const Product = motion(
   forwardRef(
     (

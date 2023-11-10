@@ -1,6 +1,6 @@
-import { PProps } from './P.props';
-import styles from './P.module.css';
 import cn from 'classnames';
+import styles from './P.module.css';
+import { PProps } from './P.props';
 
 export const P = ({ size = 'm', children, className, ...props }: PProps) => {
   return (

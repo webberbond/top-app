@@ -1,10 +1,10 @@
-import { withLayout } from '@/layout/Layout';
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import axios from 'axios';
-import { MenuItem } from '@/interfaces/menu.interface';
-import { firstLevelMenu } from '@/helpers/helpers';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import { API } from '@/helpers/api';
+import { API } from '../../helpers/api';
+import { firstLevelMenu } from '../../helpers/helpers';
+import { MenuItem } from '../../interfaces/menu.interface';
+import { withLayout } from '../../layout/Layout';
 
 function Type({ firstCategory }: TypeProps) {
   return <>Type {firstCategory}</>;
