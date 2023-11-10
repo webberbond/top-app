@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { motion } from 'framer-motion';
-
 export const Menu = () => {
   const { menu, setMenu, firstCategory } = useContext(AppContext);
   const router = useRouter();
@@ -28,6 +27,7 @@ export const Menu = () => {
     },
     hidden: { opacity: 0, height: 0 },
   };
+
   const openSecondLevel = (secondCategory: string) => {
     setMenu &&
       setMenu(
@@ -53,16 +53,14 @@ export const Menu = () => {
         {firstLevelMenu.map((m) => (
           <div key={m.route}>
             <Link href={`/${m.route}`}>
-              <a>
-                <div
-                  className={cn(styles.firstLevel, {
-                    [styles.firstLevelActive]: m.id == firstCategory,
-                  })}
-                >
-                  {m.icon}
-                  <span>{m.name}</span>
-                </div>
-              </a>
+              <div
+                className={cn(styles.firstLevel, {
+                  [styles.firstLevelActive]: m.id == firstCategory,
+                })}
+              >
+                {m.icon}
+                <span>{m.name}</span>
+              </div>
             </Link>
             {m.id == firstCategory && buildSecondLevel(m)}
           </div>
@@ -70,6 +68,7 @@ export const Menu = () => {
       </>
     );
   };
+
   const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
     return (
       <div className={styles.secondBlock}>
@@ -114,19 +113,18 @@ export const Menu = () => {
   ) => {
     return pages.map((p) => (
       <motion.div key={p._id} variants={variantsChildren}>
-        <Link href={`/${route}/${p.alias}`}>
-          <a
-            tabIndex={isOpened ? 0 : -1}
-            className={cn(styles.thirdLevel, {
-              [styles.thirdLevelActive]:
-                `/${route}/${p.alias}` == router.asPath,
-            })}
-          >
-            {p.category}
-          </a>
+        <Link
+          href={`/${route}/${p.alias}`}
+          tabIndex={isOpened ? 0 : -1}
+          className={cn(styles.thirdLevel, {
+            [styles.thirdLevelActive]: `/${route}/${p.alias}` == router.asPath,
+          })}
+        >
+          {p.category}
         </Link>
       </motion.div>
     ));
   };
+
   return <div className={styles.menu}>{buildFirstLevel()}</div>;
 };
