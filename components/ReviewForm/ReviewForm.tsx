@@ -24,9 +24,11 @@ export const ReviewForm = ({
     handleSubmit,
     formState: { errors },
     reset,
+    clearErrors,
   } = useForm<IReviewForm>();
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>();
+
   const onSubmit = async (formData: IReviewForm) => {
     try {
       const { data } = await axios.post<IReviewSentResponse>(
@@ -53,6 +55,7 @@ export const ReviewForm = ({
           placeholder="Имя"
           error={errors.name}
           tabIndex={isOpened ? 0 : -1}
+          aria-invalid={errors.name ? true : false}
         />
         <Input
           {...register('title', {
@@ -62,6 +65,7 @@ export const ReviewForm = ({
           className={styles.title}
           error={errors.title}
           tabIndex={isOpened ? 0 : -1}
+          aria-invalid={errors.title ? true : false}
         />
         <div className={styles.rating}>
           <span>Оценка:</span>
@@ -89,9 +93,15 @@ export const ReviewForm = ({
           className={styles.description}
           error={errors.description}
           tabIndex={isOpened ? 0 : -1}
+          aria-label="Текст отзыва"
+          aria-invalid={errors.description ? true : false}
         />
         <div className={styles.submit}>
-          <Button appearance="primary" tabIndex={isOpened ? 0 : -1}>
+          <Button
+            appearance="primary"
+            tabIndex={isOpened ? 0 : -1}
+            onClick={() => clearErrors()}
+          >
             Отправить
           </Button>
           <span className={styles.info}>
