@@ -121,12 +121,15 @@ export const ReviewForm = ({
         </div>
       )}
       {error && (
-        <div className={cn(styles.error, styles.panel)}>
+        <div className={cn(styles.error, styles.panel)} role="alert">
           Что-то пошло не так, попробуйте обновить страницу
-          <CloseIcon
-            className={styles.close}
+          <button
             onClick={() => setError(undefined)}
-          />
+            className={styles.close}
+            aria-label="Закрыть оповещение"
+          >
+            <CloseIcon />
+          </button>
         </div>
       )}
     </form>
