@@ -65,7 +65,6 @@
   white-space: nowrap;
 }
 
-
 .thirdLevelActive,
 .thirdLevel:hover {
   color: var(--primary);

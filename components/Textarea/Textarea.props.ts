@@ -6,5 +6,5 @@ export interface TextareaProps
     TextareaHTMLAttributes<HTMLTextAreaElement>,
     HTMLTextAreaElement
   > {
-    error?: FieldError;
-  }
+  error?: FieldError;
+}

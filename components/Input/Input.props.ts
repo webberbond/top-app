@@ -6,5 +6,5 @@ export interface InputProps
     InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
-    error?: FieldError;
-  }
+  error?: FieldError;
+}
